@@ -343,6 +343,7 @@ namespace Plugins.TyrAdsSDK.Scripts
 
             _api.initialize.PostContent.identifier = id;
             _api.initialize.PostContent.identifierType = "OTHER";
+                _api.initialize.PostContent.platform = "Android";
         }
 
         #endregion
