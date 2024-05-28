@@ -37,9 +37,12 @@ namespace Plugins.TyrAdsSDK.Scripts.Caching
         public void SaveUser(TA_User userData)
         {
             if (userData == null) return;
-            _user.gender = userData.gender;
-            _user.age = userData.age;
-            _user.publisherUserId = userData.publisherUserId;
+            _user = new TA_User
+            {
+                gender = userData.gender,
+                age = userData.age,
+                publisherUserId = userData.publisherUserId
+            };
             PlayerPrefs.SetString(JsonUtility.ToJson(_user), USER);
         }
 
